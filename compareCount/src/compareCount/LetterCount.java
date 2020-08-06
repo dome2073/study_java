@@ -4,7 +4,7 @@ package compareCount;
 public class LetterCount implements Comparable<LetterCount>{
 	private char ch;
 	private int count;
-	
+	//º¯°æ
 	
 	public LetterCount(char ch) {
 		super();
