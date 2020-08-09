@@ -6,7 +6,9 @@ public class BossMonster extends Monster {
 		
 		super(level);
 		this.hp = hp * 5;
+		this.power = power * 2;
 		// TODO Auto-generated constructor stub
+		
 	}
 
 
