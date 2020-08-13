@@ -16,8 +16,8 @@ public class SendFile {
 		Map<String, String> mimeMap = new HashMap<>();
 		mimeMap.put("jpg","image/jpeg");
 		mimeMap.put("mp3","audio/mpeg");
-		mimeMap.put("html","text/html; charset=UTF-8\\r\\n\\r\\n");
-		mimeMap.put("text","text/plain; charset=UTF-8\\r\\n\\r\\n");
+		mimeMap.put("html","text/html; charset=UTF-8");
+		mimeMap.put("text","text/plain; charset=UTF-8");
 		
 		ServerSocket ss = null;
 		
@@ -62,12 +62,12 @@ public class SendFile {
 					System.out.println(fileName);
 					
 					System.out.println(ext);
-					String msg = "<h1>Hello World</h1>"; 
+					
 					
 					out.write(new String("HTTP/1.1 200 OK\r\n").getBytes("utf-8")); 
 				    out.write(new String("Cache-Control: private\r\n").getBytes()); 
 				    out.write(new String("Content-Length: "+targetFile.length()+"\r\n").getBytes("utf-8")); 
-				    out.write(new String("Content-Type: "+ext+"; charset=UTF-8\r\n\r\n").getBytes());
+				    out.write(new String("Content-Type: text/plain; charset=UTF-8\\\\r\\\\n\\\\r\\\\n").getBytes());
 					
 				    byte[] buffer = new byte[1024*8];
 				    
