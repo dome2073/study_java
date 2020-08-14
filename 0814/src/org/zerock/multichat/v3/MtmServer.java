@@ -51,6 +51,7 @@ public class MtmServer {
 							break;
 						case "1":
 							pwMap.values().forEach(p -> p.println(arr[1]+":"+ arr[2]));
+							break;
 						case "2":
 							
 							System.out.println(Arrays.toString(arr));
@@ -60,7 +61,8 @@ public class MtmServer {
 							PrintWriter targetPw = pwMap.get(target);
 							
 							targetPw.println("±Ó¼Ó¸»-"+arr[1]+"-"+arr[3]);
-
+							
+							break;
 						default:
 							break;
 						}
