@@ -3,6 +3,8 @@ package MyVecotr;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.Test;
 
 class MyVectorTest {
@@ -10,6 +12,9 @@ class MyVectorTest {
 	//생성자
 	MyVector v = new MyVector();
 	MyVector v2 = new MyVector(15);
+	ArrayList list = new ArrayList<>();
+	
+	
 	
 	
 	@Test
@@ -145,7 +150,7 @@ class MyVectorTest {
 	void removeTest() {
 		InstanceTest(v2, 14);
 		
-		v2.remove("7");
+		v2.remove("13");
 		
 		System.out.println(v2);
 		//삭제했으므로 size가 줄어들어야함
@@ -154,4 +159,30 @@ class MyVectorTest {
 		assertTrue(v2.remove("17") == false);
 		
 	}
+	
+	@Test
+	void clearTest() {
+		InstanceTest(v2, 15);
+		v2.clear();
+		System.out.println(v2);
+	}
+	
+	@Test
+	void setCapacity() {
+		InstanceTest(v2, 15);
+		
+		v2.setCapacity(50);
+		
+		System.out.println(v2.capacity());
+		
+	}
+	
+	@Test
+	void ensureCapacity() {
+		System.out.println(v);
+		
+		v.ensureCapacity(20);
+		System.out.println(v);
+	}
+	
 }
