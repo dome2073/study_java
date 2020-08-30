@@ -124,15 +124,19 @@ class MyVectorTest {
 	}
 	
 	@Test
-	void indexOfTe0st() {
+	void indexOfTest() {
 		InstanceTest(v2,14);
 		InstanceTest(v, 14);
 		
+		v2.add(11);
+		v2.add(0);
+		v2.add(0);
 		
 		v2.add(v); //테스트용 add
 		
 		System.out.println(v2); 
 		
+		System.out.println("??"+v2.indexOf(0));
 		
 		//capacity 14에 v2.add했으므로 14와 같다면 true
 		assertTrue(v2.indexOf(v) == 14);
@@ -140,6 +144,7 @@ class MyVectorTest {
 		assertTrue(v2.indexOf("12") == 12);
 		
 		MyVector v3 = new MyVector(); //테스트용
+		
 		
 		//없는 객체를 찾는다면 -1이 나와야함
 		assertTrue(v2.indexOf(v3) == -1);

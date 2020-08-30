@@ -78,7 +78,7 @@ public class MyVector {
 		// 어떻게 ? 배열을 돌아다니면서
 		for (int i = 0; i < size(); i++) {
 			if (objArr[i].equals(obj)) {
-
+				System.out.println("i ="+i);
 				return i;
 			}
 		}
