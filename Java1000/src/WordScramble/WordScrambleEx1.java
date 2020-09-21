@@ -22,15 +22,18 @@ class WordScrambleEx1 {
    
     public static String getScrambledWord(String str) { 
     	
-    	char[] tmp = null;
-    	System.out.println(str.length());
+    	String newStr = "";
+
+    	int random;
     	
     	//1.주어진 문자열 str의 각 문자의 순서를 섞는다 
     	for(int i=0; i<str.length(); i++) {
-    		
+    		random = (int) (Math.random() * str.length());
+    		newStr += str.charAt(random);
     	}
     	//2.새로운 문자열로 반환한다.
     	
-    	return "";
+    	
+    	return newStr;
     } // scramble(String str)
 }
