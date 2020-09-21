@@ -20,20 +20,17 @@ class WordScrambleEx1 {
     	return strArr[random];
     }
    
-    public static String getScrambledWord(String str) { 
-    	
-    	String newStr = "";
+    public static String getScrambledWord(String str) {
+		char[] chArr = str.toCharArray();
+		
+		for (int i = 0; i < str.length(); i++) {
+			int idx = (int) (Math.random() * str.length());
 
-    	int random;
-    	
-    	//1.주어진 문자열 str의 각 문자의 순서를 섞는다 
-    	for(int i=0; i<str.length(); i++) {
-    		random = (int) (Math.random() * str.length());
-    		newStr += str.charAt(random);
-    	}
-    	//2.새로운 문자열로 반환한다.
-    	
-    	
-    	return newStr;
-    } // scramble(String str)
+			char tmp = chArr[i];
+			chArr[i] = chArr[idx];
+			chArr[idx] = tmp;
+		}
+		
+		return new String(chArr);
+	} // scramble(String str)
 }
